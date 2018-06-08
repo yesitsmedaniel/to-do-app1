@@ -1,0 +1,12 @@
+h1 {
+  font-style: normal;
+  color: teal;
+  font-family: roboto;
+  padding-left: 10px;
+}
+
+label {
+  font-family: roboto;
+  font-weight: lighter;
+  padding-left: 10px;
+}
