@@ -1,12 +1,35 @@
-h1 {
-  font-style: normal;
-  color: teal;
-  font-family: roboto;
-  padding-left: 10px;
+/*header {
+  padding: 100px;
+  background-color: black;
+  height:10vh;
+}*/
+
+@media screen and (max-width: 1024px) {
+  header.mdl-layout__header {
+    display: flex;
+    padding-left: 16px;;
+  }
+
 }
 
+/*h1 {
+  font-style: normal;
+  color: white;
+  font-family: roboto;
+  padding-left: 10px;
+}*/
+
+
 label {
+  font-size: 1.25em;
   font-family: roboto;
   font-weight: lighter;
-  padding-left: 10px;
+  padding-left: 16px;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+ul {
+  font-family: roboto;
 }
