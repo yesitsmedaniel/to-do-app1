@@ -34,9 +34,12 @@ function onReady () {
 
     // attach delete button to list item
     newLi.appendChild(deleteButton);
-
+    deleteButton.addEventListener('click', function(){
+      newLi.parentNode.removeChild(newLi);
+    })
 
   });
+
 }
 
 window.onload = function() {
