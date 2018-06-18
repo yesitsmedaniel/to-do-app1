@@ -1,16 +1,15 @@
 function onReady() {
   const toDos = [];
   const addToDoForm = document.getElementById('addToDoForm');
+  const newToDoText = document.getElementById('newToDoText');
 
   function createNewToDo() {
-    const newToDoText = document.getElementById('newToDoText');
+
     toDos.push({
       title: newToDoText.value;
       complete: false
     });
-    newToDoText.value ='';
 
-    renderTheUI();
   }
   function renderTheUI() {
     const toDoList = document.getElementById('toDoList');
@@ -31,9 +30,10 @@ function onReady() {
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
     createNewToDo();
+    newToDoText.value ='';
+    renderTheUI();
   });
 
-  renderTheUI();
 }
 
 window.onload = function() {
