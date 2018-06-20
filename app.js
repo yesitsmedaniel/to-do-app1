@@ -2,14 +2,14 @@ function onReady() {
  let id = 0;
  const toDos = [];
  const addToDoForm = document.getElementById('addToDoForm');
-
     function createNewToDo() {
 const newToDoText = document.getElementById('newToDoText');
          if (!newToDoText.value) { return; }
         toDos.push({
       title: newToDoText.value,
       complete: false
-      //id:  "value of the ID variable?"
+      //id: id
+      //id: ++id
       //increment the ID variable? like... ID= ID + 1?
     });
         newToDoText.value = '';
