@@ -4,8 +4,9 @@ function onReady() {
   const addToDoForm = document.getElementById('addToDoForm');
 
   function createNewToDo() {
-    const newToDoText = document.getElementById('newToDoText');
+    let newToDoText = document.getElementById('newToDoText');
     if (!newToDoText.value) { return; }
+
 
     toDos.push({
       title: newToDoText.value,
@@ -36,12 +37,17 @@ function onReady() {
       deleteButton.appendChild(deleteButText);
 
       //should the deleteButton event listener be OUTside this function?
-      //deleteButton.addEventListener('click', function())
-
-      //not sure how to write the filter()array method
+    //  deleteButton.addEventListener('click', function())
     });
 
-  }
+    }                 //keep him here to close Render the Ui func
+  /* deleteButton.addEventListener('click', function (){
+     deleteToDo(toDo);
+   });*/
+
+    function deleteToDo(id) {
+      return toDos.filter(toDo => toDo.id !== id);
+    }
 
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
